@@ -1,0 +1,15 @@
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.AssemblyInfoInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.AssemblyInfo.cs
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.csproj.CoreCompileInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.sourcelink.json
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\bin\Debug\net8.0\Parallelism_1.exe
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\bin\Debug\net8.0\Parallelism_1.deps.json
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\bin\Debug\net8.0\Parallelism_1.runtimeconfig.json
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\bin\Debug\net8.0\Parallelism_1.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\bin\Debug\net8.0\Parallelism_1.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\refint\Parallelism_1.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\Parallelism_1.genruntimeconfig.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Parallelism\obj\Debug\net8.0\ref\Parallelism_1.dll

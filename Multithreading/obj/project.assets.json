@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Study KNU\\VIII\\Системне програмування\\Projects\\Multitreading\\Multitreading.csproj",
+      "projectUniqueName": "E:\\Study KNU\\VIII\\Системне програмування\\Projects\\Multithreading\\Multitreading.csproj",
       "projectName": "Multitreading",
-      "projectPath": "E:\\Study KNU\\VIII\\Системне програмування\\Projects\\Multitreading\\Multitreading.csproj",
+      "projectPath": "E:\\Study KNU\\VIII\\Системне програмування\\Projects\\Multithreading\\Multitreading.csproj",
       "packagesPath": "C:\\Users\\Користувач\\.nuget\\packages\\",
-      "outputPath": "E:\\Study KNU\\VIII\\Системне програмування\\Projects\\Multitreading\\obj\\",
+      "outputPath": "E:\\Study KNU\\VIII\\Системне програмування\\Projects\\Multithreading\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
