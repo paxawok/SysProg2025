@@ -12,7 +12,7 @@ namespace Multitreading
             Console.WriteLine("6 threads with priorities: Medium, Below Normal, Above Normal, Highest, Lowest, Medium");
             Console.WriteLine("----------------------------------------------------------------------");
 
-            // Створюємо 6 потоків 
+            // створюємо 6 потоків 
             MyThread mt1 = new MyThread("Thread 1 (Normal)");
             MyThread mt2 = new MyThread("Thread 2 (Below Normal)");
             MyThread mt3 = new MyThread("Thread 3 (Above Normal)");
@@ -20,7 +20,6 @@ namespace Multitreading
             MyThread mt5 = new MyThread("Thread 5 (Lowest)");
             MyThread mt6 = new MyThread("Thread 6 (Normal)");
 
-            // Задаємо потокам пріоритетність
             mt1.Thrd.Priority = ThreadPriority.Normal;
             mt2.Thrd.Priority = ThreadPriority.BelowNormal;
             mt3.Thrd.Priority = ThreadPriority.AboveNormal;
@@ -28,11 +27,10 @@ namespace Multitreading
             mt5.Thrd.Priority = ThreadPriority.Lowest;
             mt6.Thrd.Priority = ThreadPriority.Normal;
 
-            // Починаємо відлік 
+            // починаємо відлік 
             Stopwatch totalTime = new Stopwatch();
             totalTime.Start();
 
-            // Запускаємо потоки
             mt1.Thrd.Start();
             mt2.Thrd.Start();
             mt3.Thrd.Start();
@@ -40,7 +38,6 @@ namespace Multitreading
             mt5.Thrd.Start();
             mt6.Thrd.Start();
 
-            // Чекаємо виконання потоків
             mt1.Thrd.Join();
             mt2.Thrd.Join();
             mt3.Thrd.Join();
@@ -48,10 +45,9 @@ namespace Multitreading
             mt5.Thrd.Join();
             mt6.Thrd.Join();
 
-            // Відлік стоп
             totalTime.Stop();
 
-            // Рахуємо загальну суму і відсотки
+            // загальна сума і відсотки
             long totalCounts = mt1.Count + mt2.Count + mt3.Count + mt4.Count + mt5.Count + mt6.Count;
 
             mt1.PercentageShare = (double)mt1.Count / totalCounts * 100;
@@ -61,7 +57,7 @@ namespace Multitreading
             mt5.PercentageShare = (double)mt5.Count / totalCounts * 100;
             mt6.PercentageShare = (double)mt6.Count / totalCounts * 100;
 
-            // Виводимо результат
+            // результат
             Console.WriteLine("\n--- RESULTS ---");
             Console.WriteLine($"Total execution time: {totalTime.ElapsedMilliseconds} ms");
             Console.WriteLine($"Total iterations across all threads: {totalCounts:N0}");
@@ -83,4 +79,4 @@ namespace Multitreading
             Console.ReadKey();
         }
     }
-}
+}0

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Multitreading")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f557f81dc079b19e78523145d25093d743a94c10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9309c7bdf1554ad76d78c21abf9a264c297112b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Multitreading")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Multitreading")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

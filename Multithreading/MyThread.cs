@@ -14,7 +14,7 @@ namespace Multitreading
 
         private static bool stop = false;
         private static string currentName;
-        private static readonly object lockObj = new object(); // синхронізація між об'єктами
+        private static readonly object lockObj = new object(); // стопати потік для виводу в консоль
         private Stopwatch stopwatch = new Stopwatch(); // таймер
 
         // конструктор
@@ -39,7 +39,7 @@ namespace Multitreading
                 {
                     Count++;
 
-                    if (Count % 10000000 == 0) 
+                    if (Count % 10_000_000 == 0) 
                     {
                         lock (lockObj)
                         {
@@ -50,7 +50,7 @@ namespace Multitreading
                             }
                         }
                     }
-                } while (stop == false && Count < 2000000000);
+                } while (stop == false && Count < 2e9);
 
                 // Якщо потік закінчився, інші теж стопаються
                 if (!stop)
