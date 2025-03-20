@@ -6,56 +6,96 @@ namespace ParallelTasksDemo
 {
     class Program
     {
+        // Метод для першого завдання - задача з параметром
+        static void TaskMethod(object taskNumber)
+        {
+            int num = (int)taskNumber;
+            Console.WriteLine($"Task {num} (ID: {Task.CurrentId}) started");
+
+            for (int i = 0; i < 5; i++)
+            {
+                // затримка пропорційно ідентифікатору задачі
+                int delay = 200 * Task.CurrentId.Value;
+                Thread.Sleep(delay);
+                Console.WriteLine($"Task {num} (ID: {Task.CurrentId}) step {i}, waited for {delay}ms");
+            }
+
+            Console.WriteLine($"Task {num} (ID: {Task.CurrentId}) completed");
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Main Thread is starting.");
+            Console.WriteLine("=== Завдання 1 і 2: Дві паралельні задачі з очікуванням WaitAll() ===");
 
-            // Завдання 1: затримка 200мс * id задачі
-            Task task1 = Task.Factory.StartNew(() =>
-            {
-                int taskId = Task.CurrentId ?? 1;
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(200 * taskId);
-                    Console.WriteLine($"Task {taskId}, counter = {i}");
-                }
-                Console.WriteLine($"Task {taskId} is done.");
-            });
+            // створення і запуск двох задач
+            Task task1 = new Task(TaskMethod, 1);
+            Task task2 = new Task(TaskMethod, 2);
 
-            // Завдання 2: затримка 200мс * id задачі
-            Task task2 = Task.Factory.StartNew(() =>
-            {
-                int taskId = Task.CurrentId ?? 2;
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(200 * taskId);
-                    Console.WriteLine($"Task {taskId}, iteration {i}");
-                }
-            });
+            Console.WriteLine("Starting tasks...");
+            task1.Start();
+            task2.Start();
 
-            // Очікування завершення двох задач
+            Console.WriteLine($"ID of task1: {task1.Id}");
+            Console.WriteLine($"ID of task2: {task2.Id}");
+
             Task.WaitAll(task1, task2);
 
-            Console.WriteLine("Tasks 1 and 2 completed.\n");
+            Console.WriteLine("All tasks completed!");
+            Console.WriteLine();
 
-            // Паралельне виконання за допомогою Invoke()
+            // завдання 3: лямбда-вираз як задача
+            Console.WriteLine("=== Завдання 3: Задача у вигляді лямбда-виразу ===");
+
+            Task lambdaTask = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine($"Lambda task (ID: {Task.CurrentId}) started");
+
+                for (int i = 0; i < 3; i++)
+                {
+                    Thread.Sleep(300);
+                    Console.WriteLine($"Lambda task step {i}");
+                }
+
+                Console.WriteLine($"Lambda task (ID: {Task.CurrentId}) completed");
+            });
+
+            lambdaTask.Wait();
+            Console.WriteLine("Lambda task finished!");
+            Console.WriteLine();
+
+            // завдання 4: Parallel.Invoke з лямбда-виразами
+            Console.WriteLine("=== Завдання 4: Parallel.Invoke з лямбда-виразами ===");
+
             Parallel.Invoke(
+                // перший лямбда-вираз
                 () =>
                 {
-                    Console.WriteLine("Lambda Task 1 is starting.");
-                    Thread.Sleep(500);
-                    Console.WriteLine("Lambda Task 1 is done.");
+                    Console.WriteLine($"First lambda in Invoke (Thread ID: {Thread.CurrentThread.ManagedThreadId}) started");
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Thread.Sleep(250);
+                        Console.WriteLine($"First lambda: step {i}");
+                    }
+                    Console.WriteLine("First lambda completed");
                 },
+
+                // другий лямбда-вираз
                 () =>
                 {
-                    Console.WriteLine("Lambda Task 2 is starting.");
-                    Thread.Sleep(700);
-                    Console.WriteLine("Lambda Task 2 is done.");
+                    Console.WriteLine($"Second lambda in Invoke (Thread ID: {Thread.CurrentThread.ManagedThreadId}) started");
+                    for (int i = 0; i < 4; i++)
+                    {
+                        Thread.Sleep(200);
+                        Console.WriteLine($"Second lambda: step {i}");
+                    }
+                    Console.WriteLine("Second lambda completed");
                 }
             );
 
-            Console.WriteLine("All tasks done.");
-            Console.ReadLine();
+            Console.WriteLine("All invoke lambdas completed!");
+
+            Console.WriteLine("\nProgram finished. Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
