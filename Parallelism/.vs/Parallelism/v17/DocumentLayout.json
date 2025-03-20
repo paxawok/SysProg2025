@@ -14,7 +14,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -30,8 +30,7 @@
               "RelativeToolTip": "Lab2_report.md",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-03-20T08:56:30.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T08:56:30.719Z"
             },
             {
               "$type": "Document",
@@ -41,7 +40,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Parallelism\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwFwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T01:23:13.511Z",
               "EditorCaption": ""

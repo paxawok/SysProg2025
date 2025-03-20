@@ -7,7 +7,7 @@ namespace ParallelTasksDemo
     class Program
     {
         // Метод для першого завдання - задача з параметром
-        static void TaskMethod(object taskNumber)
+        public static void TaskMethod(object taskNumber)
         {
             int num = (int)taskNumber;
             Console.WriteLine($"Task {num} (ID: {Task.CurrentId}) started");
@@ -23,9 +23,9 @@ namespace ParallelTasksDemo
             Console.WriteLine($"Task {num} (ID: {Task.CurrentId}) completed");
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("=== Завдання 1 і 2: Дві паралельні задачі з очікуванням WaitAll() ===");
+            Console.WriteLine("=== Завдання 1 i 2: Двi паралельнi задачi з очiкуванням WaitAll() ===");
 
             // створення і запуск двох задач
             Task task1 = new Task(TaskMethod, 1);
@@ -44,7 +44,7 @@ namespace ParallelTasksDemo
             Console.WriteLine();
 
             // завдання 3: лямбда-вираз як задача
-            Console.WriteLine("=== Завдання 3: Задача у вигляді лямбда-виразу ===");
+            Console.WriteLine("=== Завдання 3: Задача у виглядi лямбда-виразу ===");
 
             Task lambdaTask = Task.Factory.StartNew(() =>
             {
