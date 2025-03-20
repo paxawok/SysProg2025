@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Parallelism\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56CE0DF4-2F06-41DE-A5C5-7AD939245B36}|Parallelism.csproj|e:\\study knu\\viii\\\u0441\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\projects\\parallelism\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56CE0DF4-2F06-41DE-A5C5-7AD939245B36}|Parallelism.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56CE0DF4-2F06-41DE-A5C5-7AD939245B36}|Parallelism_1.csproj|e:\\study knu\\viii\\\u0441\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\projects\\parallelism\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CE0DF4-2F06-41DE-A5C5-7AD939245B36}|Parallelism_1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CE0DF4-2F06-41DE-A5C5-7AD939245B36}|Parallelism_1.csproj|e:\\study knu\\viii\\\u0441\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\projects\\parallelism\\lab2_report.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{56CE0DF4-2F06-41DE-A5C5-7AD939245B36}|Parallelism_1.csproj|solutionrelative:lab2_report.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Lab2_report.md",
+              "DocumentMoniker": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Parallelism\\Lab2_report.md",
+              "RelativeDocumentMoniker": "Lab2_report.md",
+              "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Parallelism\\Lab2_report.md",
+              "RelativeToolTip": "Lab2_report.md",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-20T08:56:30.719Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Parallelism\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T01:23:13.511Z",
               "EditorCaption": ""
