@@ -6,7 +6,7 @@ namespace ParallelTasksDemo
 {
     class Program
     {
-        // Метод для першого завдання - задача з параметром
+        // Метод для першого завдання
         public static void TaskMethod(object taskNumber)
         {
             int num = (int)taskNumber;

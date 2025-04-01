@@ -1,0 +1,15 @@
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.AssemblyInfoInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.AssemblyInfo.cs
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.csproj.CoreCompileInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.sourcelink.json
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\bin\Debug\net8.0-windows\Reflection.exe
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\bin\Debug\net8.0-windows\Reflection.deps.json
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\bin\Debug\net8.0-windows\Reflection.runtimeconfig.json
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\bin\Debug\net8.0-windows\Reflection.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\bin\Debug\net8.0-windows\Reflection.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\refint\Reflection.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\Reflection.genruntimeconfig.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Reflection\obj\Debug\net8.0-windows\ref\Reflection.dll

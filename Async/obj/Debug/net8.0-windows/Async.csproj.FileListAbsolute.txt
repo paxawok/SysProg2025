@@ -1,0 +1,17 @@
+E:\Study KNU\VIII\Системне програмування\Projects\Async\bin\Debug\net8.0-windows\Async.exe
+E:\Study KNU\VIII\Системне програмування\Projects\Async\bin\Debug\net8.0-windows\Async.deps.json
+E:\Study KNU\VIII\Системне програмування\Projects\Async\bin\Debug\net8.0-windows\Async.runtimeconfig.json
+E:\Study KNU\VIII\Системне програмування\Projects\Async\bin\Debug\net8.0-windows\Async.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Async\bin\Debug\net8.0-windows\Async.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.Form1.resources
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.csproj.GenerateResource.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.AssemblyInfoInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.AssemblyInfo.cs
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.csproj.CoreCompileInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.sourcelink.json
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\refint\Async.dll
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\Async.genruntimeconfig.cache
+E:\Study KNU\VIII\Системне програмування\Projects\Async\obj\Debug\net8.0-windows\ref\Async.dll
