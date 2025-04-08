@@ -7,14 +7,14 @@
       "RelativeMoniker": "D:0:0:{8C08869C-4974-43EE-BB00-AF11EAC832D7}|Async.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C08869C-4974-43EE-BB00-AF11EAC832D7}|Async.csproj|e:\\study knu\\viii\\\u0441\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\projects\\async\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8C08869C-4974-43EE-BB00-AF11EAC832D7}|Async.csproj|E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Async\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8C08869C-4974-43EE-BB00-AF11EAC832D7}|Async.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 125,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -26,9 +26,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Async\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Async\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAANsAAAAAAAAAAAAwwPkAAAABAAAAAAAAAA==",
+              "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Async\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwE0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T09:23:43.902Z",
               "EditorCaption": ""
@@ -42,8 +42,7 @@
               "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Async\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T09:21:58.02Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-27T09:21:58.02Z"
             }
           ]
         }

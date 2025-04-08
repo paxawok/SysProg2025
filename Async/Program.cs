@@ -7,7 +7,7 @@ namespace AsyncProgrammingDemo
 {
     public partial class Form1 : Form
     {
-        // Об'єкт для керування скасуванням асинхронної операції
+        // скасування
         private CancellationTokenSource cts;
 
         public Form1()
@@ -17,46 +17,43 @@ namespace AsyncProgrammingDemo
 
         private async void btnStart_Click(object sender, EventArgs e)
         {
-            // Деактивуємо кнопку Start під час виконання операції
+            // деактивація старту на час виконання
             btnStart.Enabled = false;
             btnCancel.Enabled = true;
             lblResult.Text = "Операція виконується...";
             progressBar.Value = 0;
             lblProgress.Text = "0%";
 
-            // Створюємо новий об'єкт для відміни операції
+            // створення нового об'єкту для відміни операції
             cts = new CancellationTokenSource();
 
             try
             {
-                // Створюємо об'єкт для відслідковування прогресу
+                // створення об'єкту для відслідковування прогресу
                 IProgress<int> progress = new Progress<int>((percentComplete) =>
                 {
-                    // Оновлюємо UI з відсотком виконання
+                    // відсоток
                     lblProgress.Text = $"{percentComplete}%";
                     progressBar.Value = percentComplete;
                 });
 
-                // Викликаємо асинхронну операцію і очікуємо результат
+                // викликаємо асинхронну операцію і очікуємо результат
                 int result = await PerformLongOperation(100, progress, cts.Token);
                 lblResult.Text = $"Результат: {result}";
             }
             catch (OperationCanceledException)
             {
-                // Операція була скасована користувачем
+                // операція скасована користувачем
                 lblResult.Text = "Операція скасована!";
 
-                // Не показувати діалог про помилку у режимі відлагодження
-                // Цей виняток є очікуваним при скасуванні
             }
             catch (Exception ex)
             {
-                // Сталася помилка під час виконання
+                // помилка
                 lblResult.Text = $"Помилка: {ex.Message}";
             }
             finally
             {
-                // Повертаємо UI в початковий стан
                 btnStart.Enabled = true;
                 btnCancel.Enabled = false;
                 cts?.Dispose();
@@ -64,45 +61,35 @@ namespace AsyncProgrammingDemo
             }
         }
 
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            // Скасовуємо поточну операцію
+            // скасовуємо поточну операцію
             cts?.Cancel();
             btnCancel.Enabled = false;
         }
 
-        /// <summary>
-        /// Метод, що імітує довготривалу операцію з обчисленнями
-        /// </summary>
-        /// <param name="iterations">Кількість ітерацій</param>
-        /// <param name="progress">Інтерфейс для повідомлення про хід виконання</param>
-        /// <param name="token">Токен скасування</param>
-        /// <returns>Результат виконання</returns>
+        // метод імітації обчислення
         private Task<int> PerformLongOperation(int iterations, IProgress<int> progress, CancellationToken token)
         {
             return Task.Run(() =>
             {
                 int result = 0;
-
                 for (int i = 1; i <= iterations; i++)
                 {
-                    // Перевіряємо, чи не скасовано операцію
+                    // аеревіряємo чи не скасовано операцію
                     token.ThrowIfCancellationRequested();
-
-                    // Виконуємо якісь "важкі" обчислення
-                    Thread.Sleep(100); // Імітуємо довгу операцію
+                    Thread.Sleep(100); 
                     result += i;
-
-                    // Повідомляємо про прогрес
+                    // прогрес
                     int percentComplete = (int)((double)i / iterations * 100);
                     progress.Report(percentComplete);
                 }
-
                 return result;
             }, token);
         }
 
-        // Код дизайнера форми
+        // код дизайнера форми
         private void InitializeComponent()
         {
             this.btnStart = new System.Windows.Forms.Button();

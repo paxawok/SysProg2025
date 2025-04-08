@@ -1,0 +1,17 @@
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\bin\Debug\net8.0-windows\EmployeeReflectionApp.exe
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\bin\Debug\net8.0-windows\EmployeeReflectionApp.deps.json
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\bin\Debug\net8.0-windows\EmployeeReflectionApp.runtimeconfig.json
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\bin\Debug\net8.0-windows\EmployeeReflectionApp.dll
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\bin\Debug\net8.0-windows\EmployeeReflectionApp.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.Form1.resources
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.csproj.GenerateResource.cache
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.AssemblyInfoInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.AssemblyInfo.cs
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.csproj.CoreCompileInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.sourcelink.json
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.dll
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\refint\EmployeeReflectionApp.dll
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\EmployeeReflectionApp.genruntimeconfig.cache
+E:\Study KNU\VIII\Системне програмування\Projects\EmployeeReflectionApp\obj\Debug\net8.0-windows\ref\EmployeeReflectionApp.dll
