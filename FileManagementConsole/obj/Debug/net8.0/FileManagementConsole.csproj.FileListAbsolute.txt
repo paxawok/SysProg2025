@@ -1,0 +1,15 @@
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\bin\Debug\net8.0\FileManagementConsole.exe
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\bin\Debug\net8.0\FileManagementConsole.deps.json
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\bin\Debug\net8.0\FileManagementConsole.runtimeconfig.json
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\bin\Debug\net8.0\FileManagementConsole.dll
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\bin\Debug\net8.0\FileManagementConsole.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.AssemblyInfoInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.AssemblyInfo.cs
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.csproj.CoreCompileInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.sourcelink.json
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.dll
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\refint\FileManagementConsole.dll
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\FileManagementConsole.genruntimeconfig.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementConsole\obj\Debug\net8.0\ref\FileManagementConsole.dll

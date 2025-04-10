@@ -1,0 +1,17 @@
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\bin\Debug\net8.0-windows\FileManagementForm.exe
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\bin\Debug\net8.0-windows\FileManagementForm.deps.json
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\bin\Debug\net8.0-windows\FileManagementForm.runtimeconfig.json
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\bin\Debug\net8.0-windows\FileManagementForm.dll
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\bin\Debug\net8.0-windows\FileManagementForm.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.Form1.resources
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.csproj.GenerateResource.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.AssemblyInfoInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.AssemblyInfo.cs
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.csproj.CoreCompileInputs.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.sourcelink.json
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.dll
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\refint\FileManagementForm.dll
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.pdb
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\FileManagementForm.genruntimeconfig.cache
+E:\Study KNU\VIII\Системне програмування\Projects\FileManagementForm\obj\Debug\net8.0-windows\ref\FileManagementForm.dll

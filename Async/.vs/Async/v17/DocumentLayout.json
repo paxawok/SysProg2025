@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Study KNU\\VIII\\\u0421\u0438\u0441\u0442\u0435\u043C\u043D\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0443\u0432\u0430\u043D\u043D\u044F\\Projects\\Async\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAUwOIAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAIwFIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T09:23:43.902Z",
               "EditorCaption": ""
