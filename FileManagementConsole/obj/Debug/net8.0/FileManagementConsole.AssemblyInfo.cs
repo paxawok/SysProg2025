@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileManagementConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b719fde748867877d64f0ef4b2d93ce753c9250")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b83baa343e61437f697df219ca0da1c86bb61b21")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileManagementConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileManagementConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

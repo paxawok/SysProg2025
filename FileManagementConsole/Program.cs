@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace FileManagementConsole
 {
@@ -29,10 +30,11 @@ namespace FileManagementConsole
                     // неможливо очистити консоль
                 }
 
-                Console.WriteLine("===== ФАЙЛОВИЙ МЕНЕДЖЕР =====");
+                Console.WriteLine("\n===== ФАЙЛОВИЙ МЕНЕДЖЕР =====");
                 Console.WriteLine("1. Вивести структуру директорії");
                 Console.WriteLine("2. Знайти файл");
-                Console.WriteLine("3. Графічний файловий менеджер");
+                Console.WriteLine("3. Створити папку");
+                Console.WriteLine("4. Редагувати текстовий файл");
                 Console.WriteLine("0. Вийти");
                 Console.Write("\nВаш вибір: ");
 
@@ -47,9 +49,10 @@ namespace FileManagementConsole
                         FindFile();
                         break;
                     case "3":
-                        Console.WriteLine("Для запуску графічного менеджера запустіть проєкт FileManagement");
-                        Console.WriteLine("\nНатисніть будь-яку клавішу для продовження...");
-                        Console.ReadKey();
+                        CreateDirectory();
+                        break;
+                    case "4":
+                        EditTextFile();
                         break;
                     case "0":
                         exit = true;
@@ -62,7 +65,7 @@ namespace FileManagementConsole
             }
         }
 
-        // перше завдання - показ структури директорії
+        // показ структури директорії
         static void ShowDirectoryStructure()
         {
             try
@@ -74,7 +77,7 @@ namespace FileManagementConsole
                 // помилка очищення
             }
 
-            Console.WriteLine("=== СТРУКТУРА ДИРЕКТОРІЇ ===");
+            Console.WriteLine("===== СТРУКТУРА ДИРЕКТОРІЇ =====");
             Console.WriteLine("Введіть шлях до директорії:");
             string path = Console.ReadLine();
 
@@ -82,8 +85,8 @@ namespace FileManagementConsole
             {
                 if (Directory.Exists(path))
                 {
-                    Console.WriteLine($"Структура директорії {path}:");
-                    ShowDirStructure(path, "");
+                    Console.WriteLine($"\nСтруктура директорії {path}:");
+                    ShowDirStructure(path, "", true);
                 }
                 else
                 {
@@ -99,39 +102,58 @@ namespace FileManagementConsole
             Console.ReadKey();
         }
 
-        static void ShowDirStructure(string path, string indent)
+        static void ShowDirStructure(string path, string indent, bool isLastItem = true)
         {
             // вивід директорії
             DirectoryInfo dir = new DirectoryInfo(path);
-            Console.WriteLine($"{indent}[{dir.Name}]");
+
+            // Символи для відображення дерева
+            string dirPrefix = isLastItem ? "└── " : "├── ";
+            Console.WriteLine($"{indent}{dirPrefix}[{dir.Name}]");
+
+            // Новий відступ для вмісту цієї директорії
+            string newIndent = indent + (isLastItem ? "    " : "│   ");
 
             try
             {
                 // вивід файлів
                 FileInfo[] files = dir.GetFiles();
+                int fileCount = files.Length;
+                int currentFile = 0;
+
                 foreach (FileInfo file in files)
                 {
-                    Console.WriteLine($"{indent}  {file.Name} ({file.Length} байт)");
+                    currentFile++;
+                    bool isLastFile = (currentFile == fileCount) && (dir.GetDirectories().Length == 0);
+
+                    string filePrefix = isLastFile ? "└── " : "├── ";
+                    Console.WriteLine($"{newIndent}{filePrefix}{file.Name} ({file.Length} байт)");
                 }
 
                 // рекурсивний вивід піддиректорій
                 DirectoryInfo[] subDirs = dir.GetDirectories();
+                int dirCount = subDirs.Length;
+                int currentDir = 0;
+
                 foreach (DirectoryInfo subDir in subDirs)
                 {
-                    ShowDirStructure(subDir.FullName, indent + "    ");
+                    currentDir++;
+                    bool isLast = (currentDir == dirCount);
+
+                    ShowDirStructure(subDir.FullName, newIndent, isLast);
                 }
             }
             catch (UnauthorizedAccessException)
             {
-                Console.WriteLine($"{indent}  Доступ заборонено");
+                Console.WriteLine($"{newIndent} Доступ заборонено");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{indent}  Помилка: {ex.Message}");
+                Console.WriteLine($"{newIndent} Помилка: {ex.Message}");
             }
         }
 
-        // друге завдання - пошук файлу
+        // пошук файлу
         static void FindFile()
         {
             try
@@ -140,33 +162,47 @@ namespace FileManagementConsole
             }
             catch
             {
-                // помилка
+                // помилка очищення консолі
             }
 
-            Console.WriteLine("=== ПОШУК ФАЙЛУ ===");
+            Console.WriteLine("===== ПОШУК ФАЙЛУ =====");
 
-            Console.WriteLine("Введіть ім'я файлу:");
+            Console.WriteLine("Введіть повне або часткове ім'я файлу:");
             string fileName = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(fileName))
+            {
+                Console.WriteLine("Ім'я файлу не може бути порожнім!");
+                Console.WriteLine("\nНатисніть будь-яку клавішу...");
+                Console.ReadKey();
+                return;
+            }
 
             Console.WriteLine("Введіть шлях для пошуку:");
             string searchPath = Console.ReadLine();
 
-            if (Directory.Exists(searchPath))
+            if (!Directory.Exists(searchPath))
             {
-                Console.WriteLine($"Шукаємо '{fileName}' в {searchPath}...\n");
-                int count = SearchForFile(fileName, searchPath);
-                Console.WriteLine($"\nПошук завершено. Знайдено файлів: {count}");
-            }
-            else
-            {
-                Console.WriteLine("Неправильний шлях!");
+                Console.WriteLine("Вказана директорія не існує!");
+                Console.WriteLine("\nНатисніть будь-яку клавішу...");
+                Console.ReadKey();
+                return;
             }
 
+            // використовуємо значення за замовчуванням
+            bool isCaseSensitive = false;  // за замовчуванням не враховуємо регістр
+            bool isExactMatch = false;     // за замовчуванням використовуємо частковий збіг
+
+            Console.WriteLine($"Пошук '{fileName}' в {searchPath}...\n");
+
+            int count = SearchForFile(fileName, searchPath, isCaseSensitive, isExactMatch);
+
+            Console.WriteLine($"\nПошук завершено. Знайдено файлів: {count}");
             Console.WriteLine("\nНатисніть будь-яку клавішу...");
             Console.ReadKey();
         }
 
-        static int SearchForFile(string fileName, string searchPath)
+        static int SearchForFile(string fileName, string searchPath, bool caseSensitive, bool exactMatch)
         {
             int foundCount = 0;
 
@@ -175,14 +211,41 @@ namespace FileManagementConsole
                 // пошук в поточній директорії
                 DirectoryInfo dir = new DirectoryInfo(searchPath);
 
-                // перевірка файлів
+                // отримання всіх файлів
                 FileInfo[] files = dir.GetFiles();
                 foreach (FileInfo file in files)
                 {
-                    if (file.Name.Equals(fileName, StringComparison.OrdinalIgnoreCase))
+                    bool isMatch = false;
+
+                    if (exactMatch)
                     {
-                        // інформація про знайдений файл
-                        Console.WriteLine($"Знайдено: {file.FullName}");
+                        // точний збіг імені
+                        if (caseSensitive)
+                        {
+                            isMatch = file.Name == fileName;
+                        }
+                        else
+                        {
+                            isMatch = file.Name.Equals(fileName, StringComparison.OrdinalIgnoreCase);
+                        }
+                    }
+                    else
+                    {
+                        // частковий збіг
+                        if (caseSensitive)
+                        {
+                            isMatch = file.Name.Contains(fileName);
+                        }
+                        else
+                        {
+                            isMatch = file.Name.ToLower().Contains(fileName.ToLower());
+                        }
+                    }
+
+                    if (isMatch)
+                    {
+                        // виведення інформації про знайдений файл
+                        Console.WriteLine($"Знайдено в: {file.FullName}");
                         Console.WriteLine($"Розмір: {file.Length} байт");
                         Console.WriteLine($"Створено: {file.CreationTime}");
                         Console.WriteLine($"Змінено: {file.LastWriteTime}");
@@ -196,7 +259,18 @@ namespace FileManagementConsole
                 DirectoryInfo[] subDirs = dir.GetDirectories();
                 foreach (DirectoryInfo subDir in subDirs)
                 {
-                    foundCount += SearchForFile(fileName, subDir.FullName);
+                    try
+                    {
+                        foundCount += SearchForFile(fileName, subDir.FullName, caseSensitive, exactMatch);
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                        Console.WriteLine($"Доступ до {subDir.FullName} заборонено");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Помилка при доступі до {subDir.FullName}: {ex.Message}");
+                    }
                 }
             }
             catch (UnauthorizedAccessException)
@@ -209,6 +283,160 @@ namespace FileManagementConsole
             }
 
             return foundCount;
+        }
+
+        // створення директорії
+        static void CreateDirectory()
+        {
+            try
+            {
+                Console.Clear();
+            }
+            catch
+            {
+                // помилка
+            }
+
+            Console.WriteLine("===== СТВОРЕННЯ ДИРЕКТОРІЇ =====");
+
+            Console.WriteLine("Введіть шлях, де створити директорію:");
+            string basePath = Console.ReadLine();
+
+            if (!Directory.Exists(basePath))
+            {
+                Console.WriteLine("Вказаний шлях не існує!");
+                Console.WriteLine("\nНатисніть будь-яку клавішу...");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine("Введіть ім'я нової директорії:");
+            string dirName = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(dirName))
+            {
+                Console.WriteLine("Ім'я директорії не може бути порожнім!");
+                Console.WriteLine("\nНатисніть будь-яку клавішу...");
+                Console.ReadKey();
+                return;
+            }
+
+            try
+            {
+                string newDirPath = Path.Combine(basePath, dirName);
+
+                if (Directory.Exists(newDirPath))
+                {
+                    Console.WriteLine("Директорія з таким ім'ям вже існує!");
+                }
+                else
+                {
+                    Directory.CreateDirectory(newDirPath);
+                    Console.WriteLine($"Директорія створена успішно: {newDirPath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Помилка створення директорії: {ex.Message}");
+            }
+
+            Console.WriteLine("\nНатисніть будь-яку клавішу...");
+            Console.ReadKey();
+        }
+
+        // редагування текстового файлу
+        static void EditTextFile()
+        {
+            try
+            {
+                Console.Clear();
+            }
+            catch
+            {
+                // помилка
+            }
+
+            Console.WriteLine("===== РЕДАГУВАННЯ ТЕКСТОВОГО ФАЙЛУ =====");
+
+            Console.WriteLine("Введіть повний шлях до файлу:");
+            string filePath = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(filePath))
+            {
+                Console.WriteLine("Шлях не може бути порожнім!");
+                Console.WriteLine("\nНатисніть будь-яку клавішу...");
+                Console.ReadKey();
+                return;
+            }
+
+            // перевіряємо чи це текстовий файл
+            string extension = Path.GetExtension(filePath).ToLower();
+            bool isTextFile = extension == ".txt" || extension == ".log" ||
+                             extension == ".csv" || extension == ".xml" ||
+                             extension == ".json" || extension == ".html" ||
+                             extension == ".css" || extension == ".js" ||
+                             extension == ".cs" || extension == ".config";
+
+            if (!isTextFile)
+            {
+                Console.WriteLine("Попередження: Файл може не бути текстовим. Продовжити? (y/n)");
+                string answer = Console.ReadLine();
+                if (answer.ToLower() != "y")
+                {
+                    return;
+                }
+            }
+
+            try
+            {
+                // перевіряємо існування файлу
+                bool fileExists = File.Exists(filePath);
+                string fileContent = "";
+
+                if (fileExists)
+                {
+                    // читаємо вміст файлу
+                    fileContent = File.ReadAllText(filePath);
+                    Console.WriteLine("===== ПОТОЧНИЙ ВМІСТ ФАЙЛУ =====");
+                    Console.WriteLine(fileContent);
+                    Console.WriteLine("==================================");
+                }
+                else
+                {
+                    Console.WriteLine("Файл не існує. Буде створено новий файл.");
+                }
+
+                Console.WriteLine("\nВведіть новий вміст файлу (для завершення введіть пустий рядок):");
+
+                StringBuilder newContent = new StringBuilder();
+                string line;
+
+                while (!string.IsNullOrEmpty(line = Console.ReadLine()))
+                {
+                    newContent.AppendLine(line);
+                }
+
+                Console.WriteLine("\nЗберегти зміни? (y/n)");
+                string saveAnswer = Console.ReadLine();
+
+                if (saveAnswer.ToLower() == "y")
+                {
+                    // зберігаємо файл
+                    File.WriteAllText(filePath, newContent.ToString());
+                    Console.WriteLine("Файл успішно збережено!");
+                }
+                else
+                {
+                    Console.WriteLine("Зміни скасовано.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Помилка при роботі з файлом: {ex.Message}");
+            }
+
+            Console.WriteLine("\nНатисніть будь-яку клавішу...");
+            Console.ReadKey();
         }
     }
 }
